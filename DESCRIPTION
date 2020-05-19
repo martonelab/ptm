@@ -1,0 +1,26 @@
+Package: ptm
+Title: Custom Functions for the Martone Lab
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Jasmine",
+           family = "Lai",
+           role = c("aut", "cre"),
+           email = "jasmine.lai@alumni.ubc.ca")
+Description: Brings together the most commonly used functions in the Martone Lab.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    googlesheets4,
+    purrr,
+    worrms,
+    dplyr,
+    readr,
+    stringr,
+    here,
+    magrittr
+RoxygenNote: 7.1.0
+URL: https://github.com/laijasmine/ptm
+BugReports: https://github.com/laijasmine/ptm/issues
+Suggests: 
+    testthat (>= 2.1.0)
