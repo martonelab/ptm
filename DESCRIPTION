@@ -18,7 +18,8 @@ Imports:
     readr,
     stringr,
     here,
-    magrittr
+    magrittr,
+    tidyr
 RoxygenNote: 7.1.1
 URL: https://martonelab.github.io/ptm/
 BugReports: https://github.com/martonelab/ptm/issues
