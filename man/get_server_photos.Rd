@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_server_photos.R
 \name{get_server_photos}
 \alias{get_server_photos}
-\title{Title}
+\title{Take some ptm numbers and find the photos}
 \usage{
 get_server_photos(ptm, results_folder = tempdir())
 }
@@ -15,7 +15,7 @@ get_server_photos(ptm, results_folder = tempdir())
 
 }
 \description{
-Title
+Take some ptm numbers and find the photos
 }
 \examples{
 ### Not run:

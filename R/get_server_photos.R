@@ -1,4 +1,4 @@
-#' Title
+#' Take some ptm numbers and find the photos
 #'
 #' @param ptm int a ptm number
 #' @param results_folder chr destination folder
