@@ -90,7 +90,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/laijasmine/ptm/">
+  <a href="https://github.com/martonelab/ptm/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -109,7 +109,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Gets the higher taxonomy and authorship of the species using the Worms database</h1>
-    <small class="dont-index">Source: <a href='https://github.com/laijasmine/ptm/blob/master/R/taxonomy.R'><code>R/taxonomy.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/martonelab/ptm/blob/master/R/taxonomy.R'><code>R/taxonomy.R</code></a></small>
     <div class="hidden name"><code>taxonomy.Rd</code></div>
     </div>
 
@@ -133,17 +133,20 @@
     <p>dataframe</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>taxonomy</span>(<span class='st'>"Ulva linza"</span>)</div><div class='output co'>#&gt; <span class='error'>Error: (408) Request Timeout - AphiaRecordsByNames</span></div><div class='input'><span class='fu'>taxonomy</span>(<span class='st'>"Mastocarpus"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 9</span><span>
+    <pre class="examples"><div class='input'><span class='fu'>taxonomy</span>(<span class='st'>"Ulva linza"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 9
+#&gt;   scientificname rank   kingdom phylum    class    order family genus authorship
+#&gt;   &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;     
+#&gt; 1 Ulva linza     Speci… Plantae Chloroph… Ulvophy… Ulva… Ulvac… Ulva  Linnaeus  </div><div class='input'><span class='fu'>taxonomy</span>(<span class='st'>"Mastocarpus"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 9
 #&gt;   scientificname rank  kingdom phylum  class   order   family  genus  authorship
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     
-#&gt; </span><span style='color: #555555;'>1</span><span> Mastocarpus    Genus Plantae Rhodop… Florid… Gigart… Phyllo… Masto… Kützing   </div><div class='input'>
+#&gt;   &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;     
+#&gt; 1 Mastocarpus    Genus Plantae Rhodop… Florid… Gigart… Phyllo… Masto… Kützing   </div><div class='input'>
 <span class='co'># A list of species</span>
-<span class='fu'>taxonomy</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Ulva linza"</span>, <span class='st'>"Mastocarpus"</span>))</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 9</span><span>
+<span class='fu'>taxonomy</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Ulva linza"</span>, <span class='st'>"Mastocarpus"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
 #&gt;   scientificname rank   kingdom phylum  class   order  family  genus  authorship
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     
-#&gt; </span><span style='color: #555555;'>1</span><span> Ulva linza     Speci… Plantae Chloro… Ulvoph… Ulval… Ulvace… Ulva   Linnaeus  
-#&gt; </span><span style='color: #555555;'>2</span><span> Mastocarpus    Genus  Plantae Rhodop… Florid… Gigar… Phyllo… Masto… Kützing   </div><div class='input'>
-</div></span></pre>
+#&gt;   &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;     
+#&gt; 1 Ulva linza     Speci… Plantae Chloro… Ulvoph… Ulval… Ulvace… Ulva   Linnaeus  
+#&gt; 2 Mastocarpus    Genus  Plantae Rhodop… Florid… Gigar… Phyllo… Masto… Kützing   </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

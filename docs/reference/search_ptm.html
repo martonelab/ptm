@@ -93,7 +93,7 @@ looks in the Final determination and Determination in the field" />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/laijasmine/ptm/">
+  <a href="https://github.com/martonelab/ptm/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -113,7 +113,7 @@ looks in the Final determination and Determination in the field" />
     <div class="page-header">
     <h1>Searches for species in PTM masterlist
 looks in the Final determination and Determination in the field</h1>
-    <small class="dont-index">Source: <a href='https://github.com/laijasmine/ptm/blob/master/R/search_ptm.R'><code>R/search_ptm.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/martonelab/ptm/blob/master/R/search_ptm.R'><code>R/search_ptm.R</code></a></small>
     <div class="hidden name"><code>search_ptm.Rd</code></div>
     </div>
 
@@ -138,20 +138,20 @@ looks in the Final determination and Determination in the field</p>
     <p>dataframe</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>search_ptm</span>(<span class='st'>"Ulva lactuca"</span>)</div><div class='output co'>#&gt; <span class='message'>Reading from "PTM - Master List"</span></div><div class='output co'>#&gt; <span class='message'>Range "'All PTM data'!2:5000000"</span></div><div class='output co'>#&gt; <span class='warning'>Warning: NAs introduced by coercion</span></div><div class='output co'>#&gt; <span class='warning'>Warning: NAs introduced by coercion</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 0 x 39</span><span>
-#&gt; </span><span style='color: #555555;'># … with 39 variables: `PTM#` </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, `Final determination` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `genetic</span><span>
-#&gt; </span><span style='color: #555555;'>#   match/notes` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Determination in the field` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, Qualifier </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   `DNA location` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Extra DNA Sample` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Date of</span><span>
-#&gt; </span><span style='color: #555555;'>#   Extraction` </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span style='color: #555555;'>, `PCR results` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, CO1 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, psbA </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, rbcL </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   `Voucher location` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, BOLDNumber </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, GenbankNumber </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   `Red/Coralline/Green/Brown` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, Country </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, StateProvince </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   Locality </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Date Collected` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Reproductive Status` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Field</span><span>
-#&gt; </span><span style='color: #555555;'>#   Notes` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Accession #` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Missing accession` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   Habitat </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, Depth </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Fragments available?` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, Latitude </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   Longitude </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, `Primary Collector` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Other collectors` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   `Determined by` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Determination Date` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, Project </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `Photos</span><span>
-#&gt; </span><span style='color: #555555;'>#   on server` </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, `Photos on server NEW test` </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, `CO1 NEW` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `PSBA</span><span>
-#&gt; </span><span style='color: #555555;'>#   NEW` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, `RBCL NEW` </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div></span></pre>
+    <pre class="examples"><div class='input'><span class='fu'>search_ptm</span>(<span class='st'>"Ulva lactuca"</span>)</div><div class='output co'>#&gt; <span class='message'>Reading from "PTM - Master List"</span></div><div class='output co'>#&gt; <span class='message'>Range "'All PTM data'!2:5000000"</span></div><div class='output co'>#&gt; <span class='warning'>Warning: NAs introduced by coercion</span></div><div class='output co'>#&gt; <span class='warning'>Warning: NAs introduced by coercion</span></div><div class='output co'>#&gt; # A tibble: 0 x 39
+#&gt; # … with 39 variables: `PTM#` &lt;int&gt;, `Final determination` &lt;chr&gt;, `genetic
+#&gt; #   match/notes` &lt;chr&gt;, `Determination in the field` &lt;chr&gt;, Qualifier &lt;chr&gt;,
+#&gt; #   `DNA location` &lt;chr&gt;, `Extra DNA Sample` &lt;chr&gt;, `Date of
+#&gt; #   Extraction` &lt;date&gt;, `PCR results` &lt;chr&gt;, CO1 &lt;chr&gt;, psbA &lt;chr&gt;, rbcL &lt;chr&gt;,
+#&gt; #   `Voucher location` &lt;chr&gt;, BOLDNumber &lt;chr&gt;, GenbankNumber &lt;chr&gt;,
+#&gt; #   `Red/Coralline/Green/Brown` &lt;chr&gt;, Country &lt;chr&gt;, StateProvince &lt;chr&gt;,
+#&gt; #   Locality &lt;chr&gt;, `Date Collected` &lt;chr&gt;, `Reproductive Status` &lt;chr&gt;, `Field
+#&gt; #   Notes` &lt;chr&gt;, `Accession #` &lt;chr&gt;, `Missing accession` &lt;chr&gt;,
+#&gt; #   Habitat &lt;chr&gt;, Depth &lt;chr&gt;, `Fragments available?` &lt;chr&gt;, Latitude &lt;dbl&gt;,
+#&gt; #   Longitude &lt;dbl&gt;, `Primary Collector` &lt;chr&gt;, `Other collectors` &lt;chr&gt;,
+#&gt; #   `Determined by` &lt;chr&gt;, `Determination Date` &lt;chr&gt;, Project &lt;chr&gt;, `Photos
+#&gt; #   on server` &lt;int&gt;, `Photos on server NEW test` &lt;int&gt;, `CO1 NEW` &lt;chr&gt;, `PSBA
+#&gt; #   NEW` &lt;chr&gt;, `RBCL NEW` &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
