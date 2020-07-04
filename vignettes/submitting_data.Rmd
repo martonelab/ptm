@@ -1,0 +1,55 @@
+---
+title: "submitting_data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{submitting_data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ptm)
+```
+
+
+
+Some dataframe with species names
+```{r, eval=FALSE}
+df <- readxl::read_xlsx("yourfile.xlsx")
+```
+
+```{r, echo=F}
+df <- tibble::tribble(
+                      ~Final.determination,                         ~`genetic.match/notes`,              ~Determination.in.the.field,
+    "Corallina officinalis var. chilensis",                                             NA,                  "Corallina officinalis",
+                       "Bossiella plumosa",                                  "no more DNA",                      "Bossiella plumosa",
+           "Calliarthron cheilosporioides",                                             NA,          "Calliarthron cheilosporioides"
+  )
+
+```
+
+```{r, echo=F}
+gt::gt(df)
+```
+
+Get the higher taxonomy
+```{r, echo=T}
+taxa <- taxonomy(df$Final.determination)
+```
+
+Add it back to the original data
+```{r, eval=FALSE}
+cbind(taxa, df)
+```
+
+```{r, echo=FALSE}
+gt::gt(cbind(taxa, df))
+```
+

@@ -1,1 +1,18 @@
 destination: docs
+reference:
+- title: "Writing masterlist"
+  desc: >
+    Functions for working on the masterlist
+- contents: 
+  - masterlist
+  - masterlist_update_seq
+  - masterlist_update_photo
+- title: "Using the masterlist"
+- contents:
+  - search_ptm
+  - get_server_photos
+- title: "Submission help"
+- desc: >
+    Functions for helping submit data to other repositories (Herbarium and BOLD)
+- contents:
+  - taxonomy

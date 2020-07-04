@@ -3,6 +3,7 @@
 export("%>%")
 export(get_server_photos)
 export(masterlist)
+export(masterlist_update_photo)
 export(search_ptm)
 export(taxonomy)
 importFrom(magrittr,"%>%")

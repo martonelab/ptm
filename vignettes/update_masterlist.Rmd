@@ -1,0 +1,39 @@
+---
+title: "update_masterlist"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{update_masterlist}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+## Before you start
+
+Load your library
+```{r setup}
+library(ptm)
+```
+
+Make sure you are connected
+1. connect to ubc VPN
+2. connect to server
+3. have access to the ptm masterlist (ask Patrick for access)
+
+These functions were developed based on code from the [PTM masterlist cleaning repo](https://github.com/martonelab/PTMMasterlistCleaning)
+
+Update the sequences columns
+```{r, eval=FALSE}
+masterlist_update_seq()
+```
+
+Update the photos column
+```{r, eval=FALSE}
+masterlist_update_photo()
+```
+
