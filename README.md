@@ -1,3 +1,7 @@
+  <!-- badges: start -->
+  [![Travis build status](https://travis-ci.com/martonelab/ptm.svg?branch=master)](https://travis-ci.com/martonelab/ptm)
+  <!-- badges: end -->
+  
 # ptm
 Custom Functions for the Martone Lab
 
