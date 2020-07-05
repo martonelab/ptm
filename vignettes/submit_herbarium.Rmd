@@ -1,0 +1,33 @@
+---
+title: "submit_herbarium"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{submit_herbarium}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+Make sure you have these packages installed
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ptm)
+```
+
+```{r, eval=FALSE}
+df_herb <- ptm_to_herbarium(c("180", "192", "31"))
+```
+
+Save your work
+```{r,eval=F}
+filename <- paste0(format(Sys.time(), "%Y%b%d"),"_example")
+write_csv(df_herb, filename, na = "")
+```

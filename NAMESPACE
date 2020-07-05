@@ -2,8 +2,11 @@
 
 export("%>%")
 export(get_server_photos)
+export(herbarium_template)
 export(masterlist)
 export(masterlist_update_photo)
+export(ptm_pick_nm)
+export(ptm_to_herbarium)
 export(search_ptm)
 export(taxonomy)
 importFrom(magrittr,"%>%")
