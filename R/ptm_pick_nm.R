@@ -7,7 +7,7 @@
 #' @return
 #' @export
 #'
-#' @examples
+#' @examples #ptm_pick_nm(dataframe)
 ptm_pick_nm <- function(ml) {
   ml %>% 
     dplyr::mutate(choice = dplyr::if_else(is.na(ml$`Final determination`),

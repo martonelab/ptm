@@ -15,3 +15,6 @@ masterlist_update_photo(test = F)
 \description{
 Update photos column in masterlist
 }
+\examples{
+#masterlist_update_photo()
+}

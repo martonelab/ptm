@@ -15,3 +15,6 @@ ptm_pick_nm(ml)
 \description{
 either the Final determination if there is one of the determindation in the field if there is nothing
 }
+\examples{
+#ptm_pick_nm(dataframe)
+}

@@ -5,7 +5,7 @@
 #' @return
 #' @export
 #'
-#' @examples
+#' @examples #masterlist_update_photo()
 masterlist_update_photo <- function(test = F){
   ptm <- masterlist()
   

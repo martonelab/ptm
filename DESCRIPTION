@@ -19,12 +19,16 @@ Imports:
     stringr,
     here,
     magrittr,
-    tidyr
+    tidyr,
+    methods,
+    openxlsx,
+    taxize
 RoxygenNote: 7.1.1
 URL: https://martonelab.github.io/ptm/
 BugReports: https://github.com/martonelab/ptm/issues
 Suggests: 
     testthat (>= 2.1.0),
     knitr,
-    rmarkdown
+    rmarkdown,
+    gt
 VignetteBuilder: knitr
