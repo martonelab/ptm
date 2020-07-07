@@ -1,13 +1,15 @@
 destination: docs
 reference:
 - title: "Writing masterlist"
-  desc: >
+-  desc: >
     Functions for working on the masterlist
 - contents: 
   - masterlist
   - masterlist_update_seq
   - masterlist_update_photo
 - title: "Photos"
+  desc: >
+    Query the server for photos
 - contents:
   - search_ptm
   - get_server_photos
