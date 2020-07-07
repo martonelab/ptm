@@ -21,7 +21,8 @@ library(ptm)
 ```
 
 Make sure you are connected
-1. connect to ubc VPN
+
+1. connect to ubc VPN (instructions on ther server)
 2. connect to server
 3. have access to the ptm masterlist (ask Patrick for access)
 
@@ -37,3 +38,4 @@ Update the photos column
 masterlist_update_photo()
 ```
 
+Update the masterlist with new columns

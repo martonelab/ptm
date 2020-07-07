@@ -1,4 +1,6 @@
 #' convert PTM master list metadata to UBC herbarium list
+#' 
+#' please review the file 
 #'
 #' @param ptm list ptm numbers (character)
 #' @param filename name of the file to save to a csv file
@@ -6,7 +8,7 @@
 #' @return
 #' @export
 #'
-#' @examples ptm_to_herbarium(c("120","230","300"), tempfile("test.xlsx))
+#' @examples ptm_to_herbarium(c("120","230","300"), tempfile("test.csv"))
 ptm_to_herbarium <- function(ptm, filename = "herbarium.csv") {
   #turning off warnings - set back to 0 to turn on
   options(warn = -1)

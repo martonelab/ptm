@@ -15,5 +15,8 @@ ptm_to_herbarium(ptm, filename = "herbarium.csv")
 
 }
 \description{
-convert PTM master list metadata to UBC herbarium list
+please review the file
+}
+\examples{
+ptm_to_herbarium(c("120","230","300"), tempfile("test.csv"))
 }
