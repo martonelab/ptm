@@ -17,5 +17,6 @@ reference:
 - contents:
   - ptm_to_herbarium
   - herbarium template
+  - ptm_to_bold
   - ptm_pick_nm
   - taxonomy

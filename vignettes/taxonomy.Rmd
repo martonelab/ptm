@@ -1,5 +1,5 @@
 ---
-title: "submitting_data"
+title: "Getting taxonomic ranks"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{submitting_data}

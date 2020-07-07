@@ -1,5 +1,5 @@
 ---
-title: "submit_herbarium"
+title: "submit to repository"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{submit_herbarium}
@@ -14,20 +14,18 @@ knitr::opts_chunk$set(
 )
 ```
 
-
-Make sure you have these packages installed
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(ptm)
 ```
 
+If you want to prep a submission to the UBC Herbarium you can select the PTM numbers you want to submit.
 ```{r, eval=FALSE}
-df_herb <- ptm_to_herbarium(c("180", "192", "31"))
+df_herb <- ptm_to_herbarium(c("180", "192", "31"), tempfile("test_herb.xlsx"))
 ```
 
-Save your work
-```{r,eval=F}
-filename <- paste0(format(Sys.time(), "%Y%b%d"),"_example")
-write_csv(df_herb, filename, na = "")
+If you want to prep a submission to the BOLD with the same ptm numbers
+```{r}
+df_herb <- ptm_to_bold(c("180", "192", "31"), tempfile("test_bold.xlsx"))
 ```

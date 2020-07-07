@@ -13,5 +13,6 @@ ptm_pick_nm <- function(ml) {
     dplyr::mutate(choice = dplyr::if_else(is.na(ml$`Final determination`),
                                           ml$`Determination in the field`,
                                           ml$`Final determination`),
-                  gs = choice)
+                  gs = choice) %>% 
+    tidyr::separate(gs, into = c("g", "s"), remove = FALSE)
 }

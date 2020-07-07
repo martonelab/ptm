@@ -1,12 +1,13 @@
 #' convert PTM master list metadata to UBC herbarium list
 #'
-#' @param ptm list ptm numbers character)
+#' @param ptm list ptm numbers (character)
+#' @param filename name of the file to save to a csv file
 #'
 #' @return
 #' @export
 #'
-#' @examples ptm_to_herbarium(c("120","230","300"))
-ptm_to_herbarium <- function(ptm) {
+#' @examples ptm_to_herbarium(c("120","230","300"), tempfile("test.xlsx))
+ptm_to_herbarium <- function(ptm, filename = "herbarium.csv") {
   #turning off warnings - set back to 0 to turn on
   options(warn = -1)
   
@@ -18,8 +19,11 @@ ptm_to_herbarium <- function(ptm) {
   df_nm <- ptm::ptm_pick_nm(submit)
   
   ### Phylum Class Family
-  higher <- ptm::taxonomy(df_nm$gs)
-  df_taxon <- dplyr::left_join(df_nm, higher, by = c("gs" = "scientificname")) 
+  unique <- df_nm %>% 
+    dplyr::distinct(g, .keep_all = TRUE)
+  
+  higher <- ptm::taxonomy(unique$g)
+  df_taxon <- dplyr::left_join(df_nm, higher, by = c("g" = "genus")) 
   
   #get the metadata columns from masterlist
   meta <- df_taxon %>%
@@ -64,5 +68,5 @@ ptm_to_herbarium <- function(ptm) {
                                  ct[length(nc)])
   names(df_combine) <- nc
   
-  df_combine
+  readr::write_csv(df_combine, filename, na = "")
 }

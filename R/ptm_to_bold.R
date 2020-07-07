@@ -1,13 +1,17 @@
 #' Converts data from the PTM masterlist to the bold template
+#' 
+#' please review the resulting file before submitting
 #'
 #' @param ptm a list of ptm numbers
-#' @param filename character - file name
+#' @param filename character - file name, ends with .xlsx
 #'
 #' @return
 #' @export
 #'
-#' @examples #ptm_to_bold(c("111", "222", "333"), tempfile("savefile"))
-ptm_to_bold <- function(ptm, filename) {
+#' @examples ptm_to_bold(c("180", "192", "31"), tempfile("savefile.xlsx"))
+ptm_to_bold <- function(ptm, filename = "bold.xlsx") {
+  options(warn = -1)
+  
   master <- ptm::masterlist()
   
   submit <- master %>% 
@@ -30,13 +34,24 @@ ptm_to_bold <- function(ptm, filename) {
   coll <- readxl::read_xls(bold_file, skip = 1, sheet = 4)
   e_collect <- coll[FALSE,]
   
-  higher <-  taxize::classification(submit$`gs`, db="bold") %>% 
+  unique <- submit %>% 
+    dplyr::distinct(g, .keep_all = TRUE)
+  bold <- taxize::classification(unique$`gs`, db="bold") 
+  
+  #getting info
+  higher <- bold[!is.na(bold)] %>%
     purrr::map(., ~dplyr::select(.x, -id)) %>% 
     purrr::map_dfr(., ~tidyr::pivot_wider(.x,
-                               names_from = rank,
-                               values_from = name))
+                                          names_from = rank,
+                                          values_from = name))
   
-  df_taxon <- dplyr::left_join(submit, higher, by = c("gs" = "species")) 
+  #check if subfamily exists
+  if(!("subfamily" %in% names(higher))){
+    sub_col <- data.frame("subfamily" = matrix(NA, nrow = nrow(higher), ncol = 1))
+    higher <- cbind(higher, sub_col)
+  }
+  
+  df_taxon <- dplyr::left_join(submit, higher, by = c("g" = "genus"), keep = TRUE) 
   
   c_info <- df_taxon %>% 
     dplyr::mutate(# Voucher
@@ -53,7 +68,7 @@ ptm_to_bold <- function(ptm, filename) {
       `Identification_Method` = "",
       `Taxonomy Notes` = "",
       #collect
-      Collectors = paste0(`Primary Collector`,", ",df_taxon$`Other collectors`),
+      Collectors = paste0(`Primary Collector`,", ",`Other collectors`),
       Collection_Date = `Date Collected`,
       Country_Ocean = Country, 
       State_Province = StateProvince,
@@ -68,34 +83,29 @@ ptm_to_bold <- function(ptm, filename) {
       Tissue_des = "",
       Assoc_tax = "",
       Assoc_spe = "",
-      External = ""
-      ) %>% #depends on dataset,
-    tidyr::separate(Note, c("Site_Code","Habitat"), ";", extra = "drop") %>% 
+      External = "",
+      Elevation = "",
+      Depth = Depth,
+      Elevation_Precision = "",
+      Depth_Precision = "",
+      GPS_Source	= "",
+      Coordinate_Accuracy= "",
+      Event_Time = "",
+      Collection_Date_Accuracy	= "",
+      Habitat = Habitat,
+      Sampling_Protocol = "",
+      Collection_Notes = "",
+      Site_Code = "",
+      Collection_Event_ID = "",
+      Note = Note) %>% 
     tidyr::separate(Locality, c("Sector","Exact_site"),",")
-  c_info <- c_info %>% 
-    dplyr::mutate(Elevation = "",
-           Depth = Depth,
-           Elevation_Precision = "",
-           Depth_Precision = "",
-           GPS_Source	= "",
-           Coordinate_Accuracy= "",
-           Event_Time = "",
-           Collection_Date_Accuracy	= "",
-           Habitat = c_info$Habitat,
-           Sampling_Protocol = "",
-           Collection_Notes = c_info$Habitat,
-           Site_Code = c_info$Site_Code,
-           Collection_Event_ID = "",
-           Note = "")
   
   #selecting the relevant columns
   voucher <- c_info %>%
     dplyr::select(`Sample_ID`,`Field_ID`, `Museum_ID`, `Collection_Code`, `Insitution_Storing`)
   names(voucher) <- names(e_info)
   
-  
-  ## ------------------------------------------------------------------------------------------------------
-  s <- c_info %>%
+ s <- c_info %>%
     dplyr::select(`Sample_ID`)
   t_high <-  df_taxon %>%
     dplyr::select(`phylum`, `class`, `order`, `family`, subfamily, `genus`)

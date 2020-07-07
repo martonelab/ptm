@@ -4,19 +4,19 @@
 \alias{ptm_to_bold}
 \title{Converts data from the PTM masterlist to the bold template}
 \usage{
-ptm_to_bold(ptm, filename)
+ptm_to_bold(ptm, filename = "bold.xlsx")
 }
 \arguments{
 \item{ptm}{a list of ptm numbers}
 
-\item{filename}{character - file name}
+\item{filename}{character - file name, ends with .xlsx}
 }
 \value{
 
 }
 \description{
-Converts data from the PTM masterlist to the bold template
+please review the resulting file before submitting
 }
 \examples{
-#ptm_to_bold(c("111", "222", "333"), tempfile("savefile"))
+ptm_to_bold(c("180", "192", "31"), tempfile("savefile.xlsx"))
 }

@@ -4,17 +4,16 @@
 \alias{ptm_to_herbarium}
 \title{convert PTM master list metadata to UBC herbarium list}
 \usage{
-ptm_to_herbarium(ptm)
+ptm_to_herbarium(ptm, filename = "herbarium.csv")
 }
 \arguments{
-\item{ptm}{list ptm numbers character)}
+\item{ptm}{list ptm numbers (character)}
+
+\item{filename}{name of the file to save to a csv file}
 }
 \value{
 
 }
 \description{
 convert PTM master list metadata to UBC herbarium list
-}
-\examples{
-ptm_to_herbarium(c("120","230","300"))
 }

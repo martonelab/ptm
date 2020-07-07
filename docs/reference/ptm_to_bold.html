@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • ptm</title>
+<title>Converts data from the PTM masterlist to the bold template — ptm_to_bold • ptm</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Converts data from the PTM masterlist to the bold template — ptm_to_bold" />
+<meta property="og:description" content="Converts data from the PTM masterlist to the bold template" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -123,117 +124,42 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Converts data from the PTM masterlist to the bold template</h1>
+    <small class="dont-index">Source: <a href='https://github.com/martonelab/ptm/blob/master/R/ptm_to_bold.R'><code>R/ptm_to_bold.R</code></a></small>
+    <div class="hidden name"><code>ptm_to_bold.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Converts data from the PTM masterlist to the bold template</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>ptm_to_bold</span>(<span class='no'>ptm</span>, <span class='no'>filename</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-writing-masterlist" class="hasAnchor"><a href="#section-writing-masterlist" class="anchor"></a>Writing masterlist</h2>
-          <p class="section-desc"><p>Functions for working on the masterlist</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="masterlist.html">masterlist()</a></code> </p>
-        </td>
-        <td><p>Opens PTM Masterlist</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="masterlist_update_seq.html">masterlist_update_seq()</a></code> </p>
-        </td>
-        <td><p>Updates the sequence column of the masterlist</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="masterlist_update_photo.html">masterlist_update_photo()</a></code> </p>
-        </td>
-        <td><p>Update photos column in masterlist</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-photos" class="hasAnchor"><a href="#section-photos" class="anchor"></a>Photos</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="search_ptm.html">search_ptm()</a></code> </p>
-        </td>
-        <td><p>Searches for species in PTM masterlist
-looks in the Final determination and Determination in the field</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_server_photos.html">get_server_photos()</a></code> </p>
-        </td>
-        <td><p>Take some ptm numbers and find the photos</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-submission-help" class="hasAnchor"><a href="#section-submission-help" class="anchor"></a>Submission help</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="ptm_to_herbarium.html">ptm_to_herbarium()</a></code> </p>
-        </td>
-        <td><p>convert PTM master list metadata to UBC herbarium list</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ptm_to_bold.html">ptm_to_bold()</a></code> </p>
-        </td>
-        <td><p>Converts data from the PTM masterlist to the bold template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ptm_pick_nm.html">ptm_pick_nm()</a></code> </p>
-        </td>
-        <td><p>picks a determination to go with</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="taxonomy.html">taxonomy()</a></code> </p>
-        </td>
-        <td><p>Gets the higher taxonomy and authorship of the species using the Worms database</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>ptm</th>
+      <td><p>a list of ptm numbers</p></td>
+    </tr>
+    <tr>
+      <th>filename</th>
+      <td><p>character - file name</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    
+
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>#ptm_to_bold(c("111", "222", "333"), tempfile("savefile"))
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
