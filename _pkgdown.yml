@@ -8,7 +8,7 @@ reference:
   - masterlist_update_seq
   - masterlist_update_photo
 - title: "Photos"
-  desc: >
+- desc: >
     Query the server for photos
 - contents:
   - search_ptm
@@ -18,7 +18,8 @@ reference:
     Functions for helping submit data to other repositories (Herbarium and BOLD)
 - contents:
   - ptm_to_herbarium
-  - herbarium template
   - ptm_to_bold
   - ptm_pick_nm
   - taxonomy
+  - herbarium_template
+

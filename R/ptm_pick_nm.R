@@ -1,4 +1,4 @@
-#' picks a determination to go with
+#' Picks a name to use
 #' 
 #' either the Final determination if there is one of the determindation in the field if there is nothing
 #'

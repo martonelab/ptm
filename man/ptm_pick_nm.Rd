@@ -2,7 +2,7 @@
 % Please edit documentation in R/ptm_pick_nm.R
 \name{ptm_pick_nm}
 \alias{ptm_pick_nm}
-\title{picks a determination to go with}
+\title{Picks a name to use}
 \usage{
 ptm_pick_nm(ml)
 }

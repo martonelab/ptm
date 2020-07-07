@@ -1,4 +1,4 @@
-#' convert PTM master list metadata to UBC herbarium list
+#' Convert PTM master list metadata to UBC herbarium list
 #' 
 #' please review the file 
 #'

@@ -2,7 +2,7 @@
 % Please edit documentation in R/ptm_to_herbarium.R
 \name{ptm_to_herbarium}
 \alias{ptm_to_herbarium}
-\title{convert PTM master list metadata to UBC herbarium list}
+\title{Convert PTM master list metadata to UBC herbarium list}
 \usage{
 ptm_to_herbarium(ptm, filename = "herbarium.csv")
 }
