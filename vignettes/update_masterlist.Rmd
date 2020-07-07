@@ -1,5 +1,5 @@
 ---
-title: "update_masterlist"
+title: "update masterlist"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{update_masterlist}

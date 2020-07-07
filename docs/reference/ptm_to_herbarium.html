@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="convert PTM master list metadata to UBC herbarium list — ptm_to_herbarium" />
-<meta property="og:description" content="convert PTM master list metadata to UBC herbarium list" />
+<meta property="og:description" content="please review the file" />
 
 
 
@@ -95,10 +95,10 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/submit_herbarium.html">submit_herbarium</a>
+      <a href="../articles/submit_repository.html">submit to repository</a>
     </li>
     <li>
-      <a href="../articles/submitting_data.html">submitting_data</a>
+      <a href="../articles/taxonomy.html">Getting taxonomic ranks</a>
     </li>
     <li>
       <a href="../articles/update_masterlist.html">update_masterlist</a>
@@ -132,17 +132,21 @@
     </div>
 
     <div class="ref-description">
-    <p>convert PTM master list metadata to UBC herbarium list</p>
+    <p>please review the file</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ptm_to_herbarium</span>(<span class='no'>ptm</span>)</pre>
+    <pre class="usage"><span class='fu'>ptm_to_herbarium</span>(<span class='no'>ptm</span>, <span class='kw'>filename</span> <span class='kw'>=</span> <span class='st'>"herbarium.csv"</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>ptm</th>
-      <td><p>list ptm numbers character)</p></td>
+      <td><p>list ptm numbers (character)</p></td>
+    </tr>
+    <tr>
+      <th>filename</th>
+      <td><p>name of the file to save to a csv file</p></td>
     </tr>
     </table>
 
@@ -153,26 +157,9 @@
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>ptm_to_herbarium</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"120"</span>,<span class='st'>"230"</span>,<span class='st'>"300"</span>))</div><div class='output co'>#&gt; <span class='message'>Reading from "PTM - Master List"</span></div><div class='output co'>#&gt; <span class='message'>Range "'All PTM data'!2:5000000"</span></div><div class='output co'>#&gt; <span class='message'>New names:</span>
+    <pre class="examples"><div class='input'><span class='fu'>ptm_to_herbarium</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"120"</span>,<span class='st'>"230"</span>,<span class='st'>"300"</span>), <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='st'>"test.csv"</span>))</div><div class='output co'>#&gt; <span class='message'>Reading from "PTM - Master List"</span></div><div class='output co'>#&gt; <span class='message'>Range "'All PTM data'!2:5000000"</span></div><div class='output co'>#&gt; <span class='message'>New names:</span>
 #&gt; <span class='message'>* NA -&gt; ...1</span>
-#&gt; <span class='message'>* NA -&gt; ...11</span></div><div class='output co'>#&gt; # A tibble: 1 x 51
-#&gt;   `Database Field` Herbarium LabelQty Phylum Class Genus Qualifier Species
-#&gt;   &lt;lgl&gt;            &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;  
-#&gt; 1 NA               UBC              1 Rhodo… Flor… Boss… ""        frondi…
-#&gt; # … with 43 more variables: `Species Author` &lt;chr&gt;, Subspecies &lt;chr&gt;,
-#&gt; #   `Subspecies Author` &lt;lgl&gt;, Variety &lt;chr&gt;, `Variety Author` &lt;lgl&gt;,
-#&gt; #   Forma &lt;lgl&gt;, `Forma Author` &lt;lgl&gt;, Country &lt;chr&gt;, ProvinceState &lt;chr&gt;,
-#&gt; #   Location &lt;chr&gt;, VLatDegree &lt;dbl&gt;, VLatMinute &lt;lgl&gt;, VLatSecond &lt;lgl&gt;,
-#&gt; #   VLongDegree &lt;dbl&gt;, VLongMinute &lt;lgl&gt;, VLongSecond &lt;lgl&gt;, UTM &lt;lgl&gt;, `Grid
-#&gt; #   Reference` &lt;lgl&gt;, VDatum &lt;lgl&gt;, VCoordinateUncertainty &lt;lgl&gt;,
-#&gt; #   Habitat &lt;chr&gt;, Microhabitat &lt;lgl&gt;, Depth &lt;chr&gt;, `Reproductive
-#&gt; #   Status` &lt;chr&gt;, `Date Collected` &lt;chr&gt;, `Primary Collector` &lt;chr&gt;, `Other
-#&gt; #   Collectors` &lt;chr&gt;, `Collector Number` &lt;chr&gt;, `Determined By` &lt;chr&gt;,
-#&gt; #   `Determination Date` &lt;chr&gt;, `Field Notes` &lt;chr&gt;, `Originally identified
-#&gt; #   as` &lt;chr&gt;, `Annotation 1` &lt;lgl&gt;, `Annotation 2` &lt;lgl&gt;, `Annotation
-#&gt; #   3` &lt;lgl&gt;, `More annotations` &lt;lgl&gt;, `Original Herbarium` &lt;lgl&gt;, `Research
-#&gt; #   Annotation` &lt;lgl&gt;, Citations &lt;lgl&gt;, Genbank &lt;chr&gt;, `BOLD Number` &lt;chr&gt;,
-#&gt; #   Coralline &lt;chr&gt;, `Georeference Notes` &lt;lgl&gt;</div></pre>
+#&gt; <span class='message'>* NA -&gt; ...11</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
