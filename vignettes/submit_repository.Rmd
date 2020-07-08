@@ -22,11 +22,11 @@ library(ptm)
 
 If you want to prep a submission to the UBC Herbarium you can select the PTM numbers you want to submit.
 ```{r, eval=FALSE}
-ptm_to_herbarium(c("180", "192", "31"), tempfile("test_herb.xlsx"))
+ptm_to_herbarium(c("180", "192", "31"), tempfile("test_herb.csv"))
 ```
 
-If you want to prep a submission to the BOLD with the same ptm numbers
-```{r}
+If you want to prep a submission to the BOLD with the same ptm numbers:
+```{r, eval=FALSE}
 ptm_to_bold(c("180", "192", "31"), tempfile("test_bold.xlsx"))
 ```
 

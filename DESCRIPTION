@@ -32,3 +32,5 @@ Suggests:
     rmarkdown,
     gt
 VignetteBuilder: knitr
+Depends: 
+    R (>= 2.10)

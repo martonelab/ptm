@@ -19,24 +19,11 @@ ptm_to_bold <- function(ptm, filename = "bold.xlsx") {
            !is.na(`PTM#`)) %>% 
     ptm::ptm_pick_nm()
   
-  #download bold data
-  bold_link <- "https://github.com/martonelab/BoldWorkflow/raw/master/01_spreadsheet/SpecimenDataV3Transitional_BOLDTemplate.xls"
-  bold_file <- tempfile("bold_template.xls")
-  download.file(bold_link, bold_file)
-  
-  #read in each xls file
-  info <- readxl::read_xls(bold_file, skip = 1, sheet = 1)
-  e_info <- info[FALSE,]
-  tax <- readxl::read_xls(bold_file, skip = 1, sheet = 2)
-  e_taxon <- tax[FALSE,]
-  spe <- readxl::read_xls(bold_file, skip = 1, sheet = 3)
-  e_specimen <- spe[FALSE,]
-  coll <- readxl::read_xls(bold_file, skip = 1, sheet = 4)
-  e_collect <- coll[FALSE,]
+
   
   unique <- submit %>% 
     dplyr::distinct(g, .keep_all = TRUE)
-  bold <- taxize::classification(unique$`gs`, db="bold") 
+  bold <- taxize::classification(unique$g, db="bold") 
   
   #getting info
   higher <- bold[!is.na(bold)] %>%

@@ -1,6 +1,7 @@
 #' Convert PTM master list metadata to UBC herbarium list
 #' 
 #' please review the file 
+#' - herbarium file used downloaded n July 7 2020
 #'
 #' @param ptm list ptm numbers (character)
 #' @param filename name of the file to save to a csv file
@@ -45,7 +46,6 @@ ptm_to_herbarium <- function(ptm, filename = "herbarium.csv") {
                   `Collector Number`,`Determined by`, `Determination Date`, `Field Notes`, `Originally identified as`,
                   GenbankNumber, BOLDNumber, Coralline)
   
-  collector_template <- ptm::herbarium_template()
   nc <- names(collector_template)
   nm <- names(meta)
   

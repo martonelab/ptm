@@ -96,31 +96,9 @@
     
     
 <p>If you want to prep a submission to the UBC Herbarium you can select the PTM numbers you want to submit.</p>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="../reference/ptm_to_herbarium.html">ptm_to_herbarium</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"180"</span>, <span class="st">"192"</span>, <span class="st">"31"</span>), <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span>(<span class="st">"test_herb.xlsx"</span>))</pre></body></html></div>
-<p>If you want to prep a submission to the BOLD with the same ptm numbers</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/ptm_to_bold.html">ptm_to_bold</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"180"</span>, <span class="st">"192"</span>, <span class="st">"31"</span>), <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span>(<span class="st">"test_bold.xlsx"</span>))
-<span class="co">#&gt; Using an auto-discovered, cached token.</span>
-<span class="co">#&gt; To suppress this message, modify your code or options to clearly consent to the use of a cached token.</span>
-<span class="co">#&gt; See gargle's "Non-interactive auth" vignette for more details:</span>
-<span class="co">#&gt; https://gargle.r-lib.org/articles/non-interactive-auth.html</span>
-<span class="co">#&gt; The googlesheets4 package is using a cached token for jasmine.lai.0911@gmail.com.</span>
-<span class="co">#&gt; Reading from "PTM - Master List"</span>
-<span class="co">#&gt; Range "'All PTM data'!2:5000000"</span>
-<span class="co">#&gt; ══  3 queries  ═══════════════</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Retrieving data for taxon 'Calliarthron tuberculosum'</span>
-<span class="co">#&gt; ✔  Found:  Calliarthron tuberculosum</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Retrieving data for taxon 'Bossiella frondifera'</span>
-<span class="co">#&gt; ✔  Found:  Bossiella frondifera</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Retrieving data for taxon 'Pseudolithophyllum sp.19muricatum'</span>
-<span class="co">#&gt; ✖  Not Found:  Pseudolithophyllum sp.19muricatum</span>
-<span class="co">#&gt; ══  Results  ═════════════════</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ● Total: 3 </span>
-<span class="co">#&gt; ● Found: 2 </span>
-<span class="co">#&gt; ● Not Found: 1</span></pre></body></html></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="../reference/ptm_to_herbarium.html">ptm_to_herbarium</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"180"</span>, <span class="st">"192"</span>, <span class="st">"31"</span>), <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span>(<span class="st">"test_herb.csv"</span>))</pre></body></html></div>
+<p>If you want to prep a submission to the BOLD with the same ptm numbers:</p>
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/ptm_to_bold.html">ptm_to_bold</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"180"</span>, <span class="st">"192"</span>, <span class="st">"31"</span>), <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span>(<span class="st">"test_bold.xlsx"</span>))</pre></body></html></div>
 <p>Check the resulting files; some modifications might need to be done.</p>
   </div>
 

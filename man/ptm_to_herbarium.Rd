@@ -15,7 +15,8 @@ ptm_to_herbarium(ptm, filename = "herbarium.csv")
 
 }
 \description{
-please review the file
+please review the file 
+- herbarium file used downloaded n July 7 2020
 }
 \examples{
 ptm_to_herbarium(c("120","230","300"), tempfile("test.csv"))

@@ -10,7 +10,7 @@ herbarium_template()
 
 }
 \description{
-Download herbarium template from website
+gets the most recent herbarium template from the website
 }
 \examples{
  #herbarium_template()
